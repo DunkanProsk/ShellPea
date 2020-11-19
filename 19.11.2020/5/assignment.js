@@ -17,11 +17,12 @@ const checkInput = (callback, ...arg) => {
 		let value = (arg === '') ? i++ : false;
 	})
 
-	i === 1 ? false : callback()
+	i > 0 ? false : callback()
 }
 
 checkInput(() => {console.log('Nice!')},'Hi','Hi','Hi','Hi','Hi','Hi','Hi','Hi')
-checkInput(() => {console.log('Nice!')},'Hi','','Hi','Hi','Hi','Hi','Hi','Hi','Hi')
+checkInput(() => {console.log('Nice!')},'Hi','','Hi','','Hi','Hi','Hi','Hi','Hi')
+checkInput(() => {console.log('Nice!')},'Hi','','Hi','Hi','Hi','Hi','Hi','Hi')
 
 sayHelloWithArguments('Hi', 'Elone')
 sayHelloWithArguments('Hi')
